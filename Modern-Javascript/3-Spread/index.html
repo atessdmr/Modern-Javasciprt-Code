@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    
+    <script>
+
+        //------------------------------------------------------------------------------------------------------
+
+        const msg = ["benim","adım","xxxxx","yyyy"];
+
+        let sonuc="";
+        for(let x of msg){
+            sonuc+=x + " ";
+        }
+        console.log(sonuc);
+
+        //! Mesaj içerisindeki değerleri foksiyon vs. üretmeden direkt "..." operatörü ile yaptırabiliyoruz.
+        console.log(...msg);
+
+        //------------------------------------------------------------------------------------------------------
+
+        const dizi1=["bir","iki"];
+        const dizi2=["üç","dört"];
+        const dizi3=[...dizi1,...dizi2];
+        console.log(dizi3);
+        console.log(...dizi3);
+
+        //------------------------------------------------------------------------------------------------------
+
+        const sayilar1=[1,2,3];
+        // const sayilar2=sayilar1; // referans copy (değiştirilen değerler her ikisinde de değişir.)
+
+        const sayilar2=[...sayilar1]; // value copy (değiştirilen değerler sadece değiştirilen alana etki eder.)
+
+        sayilar2[0]=10;
+        console.log(sayilar1,sayilar2);
+
+        //------------------------------------------------------------------------------------------------------
+
+        // rest parameters
+        function toplam(...args){
+            let sonuc=0;
+            for(let sayi of args){
+                sonuc+=sayi;
+            }
+            return sonuc;
+        }
+        console.log(toplam(1,2,3));
+        console.log(toplam(1,2,3,4));
+
+
+    </script>
+
+
+</body>
+</html>

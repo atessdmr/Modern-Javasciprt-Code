@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    
+    <script>
+
+        // Obje yerine kullanabileceğimiz daha yetenekli bir yapı.
+        // Sakladığınız keys açısından daha özgürüz. String,Boolean,Obje vs. türünde bilgi saklayabiliyoruz.
+
+        const ogrenciler=new Map();
+
+        ogrenciler.set(1,"Ahmet Ay");
+        ogrenciler.set("12345678912","Veli Güneş");
+        ogrenciler.set(true,"Ali Berke");
+
+        console.log(ogrenciler.get(1));
+        console.log(ogrenciler.get("12345678912"));
+        console.log(ogrenciler.get(true));
+
+        let sonuc;
+
+        sonuc=ogrenciler.size;
+        sonuc=ogrenciler.has(2);
+        // ogrenciler.delete(1);  // 1 değerine sahip olanı sildim.
+        sonuc=ogrenciler.size;
+        console.log(ogrenciler.get(1)); // 1 değerine sahip olanı getir dediğimde "undefined" döndü çünkü yukarıda değeri sildim.
+
+        // ogrenciler.clear(); // tüm değerleri sildim
+        console.log(ogrenciler); // yazdırdığımda bana map 0 verdi.
+
+
+        console.log(sonuc);
+
+        // Keys için döngü
+        for(let x of ogrenciler.keys()){
+            console.log(x);
+        }
+
+        // Values için döngü
+          for(let x of ogrenciler.values()){
+            console.log(x);
+        }
+
+        // Entries için döngü
+          for(let x of ogrenciler.entries()){
+            console.log(x);
+        }
+
+        // Entries'in dizi içinde bulunan değerler için döngü
+         for(let x of ogrenciler.entries()){
+            console.log(...x);
+        }
+
+        // Entries'in 0. indexinde bulunan değerler için döngü (bu bize keyleri verir. 1. indexi çağırırsak valueleri verir.)
+         for(let x of ogrenciler.entries()){
+            console.log(x[0]);
+        }
+
+        // Key ve value olarak almak için bu yöntemi kullanmak daha mantıklı
+        for(let [key,value] of ogrenciler.entries()){
+            console.log(key,value);
+        }
+
+    </script>
+
+
+
+</body>
+</html>

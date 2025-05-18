@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        const sayilar = [1, 2, 3, 5, 7, 9, 28, 57];
+        const urunler = [
+            { urunAdi: "Iphone 11", fiyat: 15000 },
+            { urunAdi: "Iphone 12", fiyat: 25000 },
+            { urunAdi: "Iphone 13", fiyat: 35000 },
+            { urunAdi: "Iphone 14", fiyat: 45000 }
+        ];
+
+        // tek sayıları yazdırmak için:
+        // const tekSayiKontrol=(sayi)=>sayi % 2 ==1;
+        // const tekSayilar=sayilar.filter((sayi)=> sayi%2==1);
+
+        // true değerleri gösterir.
+        // const tekSayilar=sayilar.map((sayi)=> sayi%2==1);
+
+
+        // const sonuc = urunler.map(urun => urun.urunAdi);
+        // const sonuc = urunler.filter(urun=>urun.fiyat>=15000).map(urun=>urun.urunAdi);
+
+        // Bulduğu ilk değeri almasını istiyorsak  (koşulu sağlayan ilk değeri getirmesi için):
+        // const sonuc=urunler.findIndex(urun=>urun.fiyat>15000);
+        const sonuc = urunler.find(urun => urun.fiyat > 15000);
+
+
+        console.log(sonuc);
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

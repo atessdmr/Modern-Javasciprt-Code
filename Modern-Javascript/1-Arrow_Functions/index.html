@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ES5
+        var selamlamaES5 = function (isim) {
+            console.log("ES5 SELAM " + isim);
+        }
+        selamlamaES5("user");
+
+        // ES6
+        const selamlamaES6 = (isim) => console.log("ES6 SELAM " + isim);
+        selamlamaES6("user");
+
+        //-----------------------------------------------------------
+
+        // ES-5
+        var toplamES5 = function (a, b) {
+            return a + b;
+        }
+        var sonucES5 = toplamES5(5, 10);
+        console.log(sonucES5);
+
+        //ES6
+        const toplamES6 = (a, b) => a + b;
+        var sonucES6 = toplamES6(10, 10);
+        console.log(sonucES6);
+
+        // Birden fazla satırda yapacaksak return etmemiz gerekir.
+        const toplamES6Ornek = (a, b) => { return a + b; }
+        var sonucES6Ornek=toplamES6Ornek(10,15);
+        console.log(sonucES6Ornek);
+
+
+
+    </script>
+
+</body>
+
+</html>

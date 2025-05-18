@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Array destructuring
+        let user = ["Xxxx", "Yyyy", "District", "City"];
+
+        // let [firstName,lastName]=name;
+
+        // let [firstName,lastName]="Xxxx Zzzz".split(" ");
+
+        let [firstName, lastName, district, city] = user;
+
+
+        console.log(firstName, lastName, district, city);
+
+        // Object destructuring
+        let urun={
+            marka:"Apple",
+            model:"Iphone 15",
+            fiyat: 49999
+        }
+
+        let{marka,model,fiyat=0,satisDurumu=false}=urun; // fiyat belirtilmemişse 0 , satış durumu belirtilmemişse false değerlerini al dedim.
+        console.log(marka,model,fiyat,satisDurumu);
+
+
+    </script>
+
+
+
+</body>
+
+</html>

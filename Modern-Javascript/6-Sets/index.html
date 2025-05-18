@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Set bilgisi Array yapısına göre kullanabiliceğiniz bir alternatif.
+
+        // const sayilar = new Set();
+        // // Eleman eklemek için Set([1,2,3]); gibi dizi ekleyebiliriz.
+
+        // ya da add methodu ile ekleyebilriiz.
+        const sayilar = new Set();
+        sayilar.add(1);
+        sayilar.add(2);
+        // İki kere 3 tekrarlasam bile sadece bir kere gösterilecektir.
+        sayilar.add(3);
+        sayilar.add(3);
+        sayilar.add("4");
+
+        // const dizi=[...sayilar];
+
+        sayilar.delete(1); // silmek için
+        console.log(sayilar.has(2)); // Elemanın dizi içerisinde yer alıp almadığına bakabiliriz.
+        // sayilar.clear(); tümünü temizler.
+
+        // console.log(sayilar.values()); // Burası bize SetIterator döner yani üzerinde dolaşabiliriz.
+        // Şu şekilde:
+        for(let x of sayilar.values()){
+            console.log(x);
+        }
+        // sayilar.values() yazmak yerine direkt sayilar da diyebiliriz. SetIterator olduğu için bize bu fırsatı sunuluyor.
+
+        // console.log(sayilar);
+
+    </script>
+
+
+</body>
+
+</html>
